@@ -1,6 +1,6 @@
-import header
+from header import *
 
-con = lite.connect('Taxi_Fare.db')
+con = lite.connect('./Taxi_Fare.db')
 
 with con:
     
@@ -28,6 +28,7 @@ with con:
         data[row[0]][time][8] += row[7]#total amount of charges
         row = cur.fetchone()
 
-path = 'data/weekly.dat'
+path = '../data/weekly.dat'
 file = open(path, 'w+')
 json.dump(data, file)
+file.close()
