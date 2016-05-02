@@ -1,6 +1,6 @@
 from header import *
 
-con = lite.connect('./Taxi_Fare.db')
+con = lite.connect('../Taxi_Fare.db')
 
 with con:
     
