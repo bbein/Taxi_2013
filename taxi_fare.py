@@ -6,6 +6,16 @@ import datetime
 import sys
 
 def convert_to_timestamp(str):
+    '''
+    Converts a date string into a timestamp.
+    If the string is empty it returns 0.
+    
+    Inputs:
+    str: string
+    
+    Returns:
+    timestamp: int
+    '''
     if str == '':
         return 0
     else:
@@ -52,7 +62,7 @@ try:
                 con.commit()
                 
         con.commit()
-        print str(file_number)+' file finished with '+str(i)+' data entries'
+        print str(file_number)+' file finished with '+str(n)+' data entries'
 except lite.Error, e:
     
     print "Error %s:" % e.args[0]
