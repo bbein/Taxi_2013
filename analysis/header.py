@@ -12,6 +12,7 @@ import csv
 import matplotlib.pyplot as plt #plotting
 import math as ma
 import json
+import os
 
 def week_based_timestamp(timestamp):
     '''
