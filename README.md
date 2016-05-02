@@ -2,7 +2,7 @@
 
 ## Instructions
 
-### 1. Install [python](https://www.python.org/) and [sqllite](https://www.sqlite.org/)
+### 1. Install [python](https://www.python.org/) and [sqlite](https://www.sqlite.org/)
 
 I use 'sqlite3' and 'python 2.7+'. It is important to also get the 'sqlite3 package for python'.
 
