@@ -1,5 +1,7 @@
 # New York City Taxi Fare data for 2013
 
+These are the suporrting files for the [blog post](https://benbein.wordpress.com/2016/05/02/Taxi) on the analysis of Taxi Fare date in NY City from 2013.
+
 ## Instructions
 
 ### 1. Install [python](https://www.python.org/) and [sqlite](https://www.sqlite.org/)
