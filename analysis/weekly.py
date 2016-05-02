@@ -10,14 +10,14 @@ with con:
     row = cur.fetchone()
     data = {}
     while row:
-        if row[3] == 0:
+        if row[7] == 0:
             print 'error total amount = 0'
             break
-        time = convert_timestamp(row[1])
+        time = week_based_timestamp(row[1])
         if not(row[0] in data):
             data[row[0]] = [[0]*9 for x in range(7*24*60)]
         data[row[0]][time][0] += 1 #total number of transactions
-        if row[6] != 0:
+        if row[5] != 0:
             data[row[0]][time][1] += 1 #total number of tipping transactions
             data[row[0]][time][2] += row[2] #tipped fares
         data[row[0]][time][3] += row[2]#total amount fares
@@ -29,6 +29,11 @@ with con:
         row = cur.fetchone()
 
 path = '../data/weekly.dat'
+#check if directory exists
+dir = os.path.dirname(path)
+if not os.path.exists(dir):
+    os.makedirs(dir)
+#save data in file
 file = open(path, 'w+')
 json.dump(data, file)
 file.close()
